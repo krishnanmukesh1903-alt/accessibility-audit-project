@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Accessible enterprise dashboard overview"><title>Overview | Northstar Dashboard</title>
+<link rel="stylesheet" href="css/styles.css"><script src="js/app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app-shell">
+<header class="site-header"><a class="brand" href="index.html" aria-label="Northstar Dashboard home"><span class="brand-mark" aria-hidden="true">N</span>Northstar</a>
+<button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
+<nav class="top-nav" id="primary-nav" aria-label="Primary navigation"><a href="index.html" aria-current="page">Overview</a><a href="pages/reports.html">Reports</a><a href="pages/settings.html">Settings</a></nav>
+<div class="header-actions"><span class="user-avatar" aria-label="Signed in as Alex Morgan">AM</span></div></header>
+<div class="workspace">
+<aside class="sidebar" aria-label="Workspace sidebar"><p class="eyebrow">WORKSPACE</p><nav aria-label="Workspace navigation"><a class="side-link active" href="index.html" aria-current="page">▦ Overview</a><a class="side-link" href="pages/reports.html">▤ Reports</a><a class="side-link" href="pages/settings.html">⚙ Settings</a></nav><section class="help-card" aria-labelledby="help-title"><h2 id="help-title">Need a hand?</h2><p>Visit the help centre for dashboard guidance.</p><a href="mailto:support@example.com">Contact support</a></section></aside>
+<main id="main" class="main-content">
+<div class="page-heading"><div><p class="eyebrow">MONDAY, 16 NOVEMBER 2026</p><h1>Overview</h1><p class="muted">Here is what is happening across your workspace.</p></div><button class="button primary" type="button" data-open-dialog="report-dialog">＋ Create report</button></div>
+<section class="metrics" aria-label="Performance summary">
+<article class="metric"><h2>Total revenue</h2><p class="metric-value">₹24.8L</p><p class="positive">↑ 12.8% <span>vs last month</span></p></article>
+<article class="metric"><h2>Active customers</h2><p class="metric-value">8,492</p><p class="positive">↑ 8.2% <span>vs last month</span></p></article>
+<article class="metric"><h2>Open tasks</h2><p class="metric-value">126</p><p class="negative">↓ 3.1% <span>vs last month</span></p></article>
+<article class="metric"><h2>Conversion rate</h2><p class="metric-value">6.24%</p><p class="positive">↑ 1.4% <span>vs last month</span></p></article>
+</section>
+<div class="content-grid">
+<section class="panel" aria-labelledby="activity-title"><div class="panel-heading"><div><h2 id="activity-title">Recent activity</h2><p class="muted">Latest updates from your workspace</p></div><a href="pages/reports.html">View reports</a></div>
+<div class="table-wrap"><table><caption class="visually-hidden">Recent workspace activity, owner, status, and date</caption><thead><tr><th scope="col">Activity</th><th scope="col">Owner</th><th scope="col">Status</th><th scope="col">Date</th></tr></thead><tbody>
+<tr><th scope="row">Q4 performance review</th><td>Alex Morgan</td><td><span class="status done">Completed</span></td><td>16 Nov</td></tr>
+<tr><th scope="row">Customer feedback analysis</th><td>Priya Shah</td><td><span class="status progress">In progress</span></td><td>15 Nov</td></tr>
+<tr><th scope="row">Accessibility review</th><td>Sam Lee</td><td><span class="status pending">Pending</span></td><td>14 Nov</td></tr>
+</tbody></table></div></section>
+<aside class="panel" aria-labelledby="quick-title"><h2 id="quick-title">Quick actions</h2><p class="muted">Common workspace tasks</p><button class="action" type="button" data-open-dialog="report-dialog">＋ <span><strong>Create a report</strong><small>Start a new report</small></span> ›</button><a class="action" href="pages/reports.html">▤ <span><strong>Explore reports</strong><small>Review saved reports</small></span> ›</a><a class="action" href="pages/settings.html">⚙ <span><strong>Manage settings</strong><small>Update preferences</small></span> ›</a></aside>
+</div></main></div>
+<footer class="site-footer"><p>© 2026 Northstar Workspace</p><nav aria-label="Footer navigation"><a href="pages/settings.html">Privacy</a><a href="mailto:support@example.com">Support</a></nav></footer></div>
+<dialog class="modal" id="report-dialog" aria-labelledby="dialog-title"><form method="dialog" id="report-form" class="modal-content"><div class="modal-heading"><h2 id="dialog-title">Create a report</h2><button type="submit" class="close" aria-label="Close dialog">×</button></div><p class="muted">Enter details to create a draft report.</p><fieldset><legend>Report details</legend><div class="field"><label for="report-name">Report name <span aria-hidden="true">*</span></label><input id="report-name" name="report-name" required minlength="3" maxlength="80" aria-describedby="name-help"><small id="name-help">Use at least 3 characters.</small></div><div class="field"><label for="period">Reporting period <span aria-hidden="true">*</span></label><select id="period" name="period" required><option value="">Choose a period</option><option>This week</option><option>This month</option><option>This quarter</option></select></div></fieldset><div class="field"><label for="report-email">Send a copy to (optional)</label><input id="report-email" name="report-email" type="email" autocomplete="email" placeholder="name@example.com"></div><p id="dialog-feedback" role="status" aria-live="polite"></p><div class="modal-actions"><button type="submit" class="button secondary">Cancel</button><button type="button" id="save-report" class="button primary">Save draft</button></div></form></dialog>
+</body></html>
